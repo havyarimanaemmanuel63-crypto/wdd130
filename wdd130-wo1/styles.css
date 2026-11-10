@@ -1,0 +1,129 @@
+/* --- VARIABLES DE COULEURS ET POLICES --- */
+:root {
+    --primary-color: #1d3557;     /* Bleu marine officiel */
+    --secondary-color: #457b9d;   /* Bleu secondaire */
+    --accent-color: #e63946;      /* Couleur d'accentuation (Rouge) */
+    --text-color: #2b2b2b;        /* Gris foncé pour une lecture confortable */
+    --bg-color: #f8f9fa;          /* Arrière-plan clair */
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- STYLES GENERAUX --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- NAVIGATION --- */
+header {
+    background-color: var(--primary-color);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #a8dadc;
+    text-decoration: underline;
+}
+
+/* --- CONTENU PRINCIPAL --- */
+h1 {
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+main {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow: hidden; /* Empêche le float de déborder */
+}
+
+/* Photo personnelle */
+main img {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    float: right;
+    margin: 0 0 15px 15px;
+    border: 3px solid var(--primary-color);
+    padding: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+main p {
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+/* --- SECTION BURUNDI --- */
+aside {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--secondary-color);
+}
+
+aside h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* Drapeau du Burundi */
+aside img {
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside p {
+    font-size: 1.05rem;
+    text-align: center;
+}
+
+/* --- PIED DE PAGE --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: #6c757d;
+    font-size: 0.95rem;
+    border-top: 1px solid #dee2e6;
+}
