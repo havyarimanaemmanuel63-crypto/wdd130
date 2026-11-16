@@ -52,6 +52,28 @@ nav, p, section, article {
   height: auto;
 }
 
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.85;
+  background-color: var(--accent1-color);
+  color: #ffffff;
+}
+
 .hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
   background-color: var(--accent2-color);
+  opacity: 0.9;
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 16px;
 }
