@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 130 | Emmanuel Havyarimana</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="wwr/">Rafting Website</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Emmanuel Havyarimana | WDD 130</h1>
+
+        <img src="images/profile.jpg" alt="A photo of Emmanuel Havyarimana" width="200">
+
+        <p>
+            Hello! My name is Emmanuel Havyarimana.
+            I am from Burundi. I am a student at BYU-Pathway Worldwide,
+            and I am learning software development and web fundamentals.
+        </p>
+
+        <p>
+            I am learning web development, HTML, CSS, and programming.
+        </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Emmanuel Havyarimana | Burundi</p>
+    </footer>
+</body>
+
+</html>
