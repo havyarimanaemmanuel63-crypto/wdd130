@@ -182,13 +182,13 @@ footer p {
     text-align: center;
 }
 
-.sociallinks {
+.socialmedia {
     display: flex;
     gap: 0.75rem;
     justify-content: flex-end;
 }
 
-.sociallinks img {
-     width: 30px;
+.socialmedia img {
+    width: 30px;
     height: 30px;
 }
