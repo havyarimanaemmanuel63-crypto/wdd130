@@ -191,4 +191,79 @@ footer p {
 .socialmedia img {
     width: 30px;
     height: 30px;
+}/* === NEW RULES FOR CONTACT.HTML === */
+
+/* 1. Company information and Google Map side by side */
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.map iframe {
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* 2. Layout for the 3 employee profiles */
+.employee-profiles {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.employee-profiles img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* 3. Contact form styling */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.contact-form fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 4. Accessible, high-contrast submit button (AA level) */
+.contact-form button[type="submit"] {
+  background-color: var(--primary-color, #0b3954);
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  color: #1a1a1a;
 }
