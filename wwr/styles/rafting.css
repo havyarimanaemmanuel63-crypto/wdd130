@@ -1,0 +1,269 @@
+:root {
+    --primary-color: #1b4965;
+    --secondary-color: #62b6cb;
+    --accent1-color: #bee9e8;
+    --accent2-color: #cae9ff;
+    --heading-font: Georgia, serif;
+    --body-font: Arial, Helvetica, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: #1a1a1a;
+    background-color: #ffffff;
+     line-height: 1.5;
+}
+
+header, main, footer {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+/* Header with CSS Grid and Nav with CSS Flexbox */
+header {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+     border-bottom: 4px solid var(--secondary-color);
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+     font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+header nav a:hover {
+    background-color: var(--accent2-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(27, 73, 101, 0.85);
+    color: #ffffff;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    background-color: rgba(202, 233, 255, 0.92);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.hero article img {
+    float: right;
+    width: 125px;
+    margin-left: 1rem;
+    border-radius: 4px;
+}
+
+.hero article p {
+    color: #1a1a1a;
+}
+
+/* History Section */
+.history {
+    padding: 2rem 1rem;
+    background-color: var(--accent1-color);
+    border-radius: 6px;
+    }
+
+.history h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 250px 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.history-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+/* Adventures Section */
+.adventures {
+    padding: 2rem 1rem;
+}
+
+.adventures h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.adventure-gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+}
+
+.adventure-gallery figure {
+    margin: 0;
+    text-align: center;
+    }
+
+.adventure-gallery img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.adventure-gallery figcaption {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+/* Footer Section */
+footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+     align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    margin-top: 2rem;
+    border-top: 4px solid var(--secondary-color);
+}
+
+footer p {
+    text-align: center;
+}
+
+.socialmedia {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: flex-end;
+}
+
+.socialmedia img {
+    width: 30px;
+    height: 30px;
+}/* === NEW RULES FOR CONTACT.HTML === */
+
+/* 1. Company information and Google Map side by side */
+.contact-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.map iframe {
+  border: none;
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* 2. Layout for the 3 employee profiles */
+.employee-profiles {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.employee-profiles img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* 3. Contact form styling */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.contact-form fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* 4. Accessible, high-contrast submit button (AA level) */
+.contact-form button[type="submit"] {
+  background-color: var(--primary-color, #0b3954);
+  color: #ffffff;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  color: #1a1a1a;
+}
