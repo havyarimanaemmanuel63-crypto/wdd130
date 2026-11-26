@@ -1,269 +1,163 @@
-:root {
-    --primary-color: #1b4965;
-    --secondary-color: #62b6cb;
-    --accent1-color: #bee9e8;
-    --accent2-color: #cae9ff;
-    --heading-font: Georgia, serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
+/* =========================================
+   HOME & TRIPS PAGES LAYOUT (W06 PROJECT)
+   ========================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: var(--body-font);
-    color: #1a1a1a;
-    background-color: #ffffff;
-     line-height: 1.5;
-}
-
-header, main, footer {
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-h1, h2 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-/* Header with CSS Grid and Nav with CSS Flexbox */
-header {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    align-items: center;
-    padding: 1rem;
-    background-color: var(--primary-color);
-     border-bottom: 4px solid var(--secondary-color);
-}
-
-header img {
-    width: 100px;
-    height: auto;
-}
-
-header nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-     font-weight: bold;
-    padding: 0.5rem 1rem;
-}
-
-header nav a:hover {
-    background-color: var(--accent2-color);
-    color: var(--primary-color);
-    border-radius: 4px;
-}
-
-/* Hero Section */
+/* 1. Hero Section with overlaid title using position: absolute */
 .hero {
     position: relative;
+    width: 100%;
     margin-bottom: 2rem;
 }
 
 .hero img {
-    display: block;
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .hero h1 {
     position: absolute;
-    top: 20px;
-    width: 100%;
-    padding: 16px;
-    text-align: center;
-    background-color: rgba(27, 73, 101, 0.85);
+    top: 20%;
+    left: 5%;
+    right: 5%;
+    background-color: rgba(0, 48, 73, 0.85);
     color: #ffffff;
-}
-
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(202, 233, 255, 0.92);
     padding: 1rem;
-    border-radius: 4px;
-}
-
-.hero article img {
-    float: right;
-    width: 125px;
-    margin-left: 1rem;
-    border-radius: 4px;
-}
-
-.hero article p {
-    color: #1a1a1a;
-}
-
-/* History Section */
-.history {
-    padding: 2rem 1rem;
-    background-color: var(--accent1-color);
-    border-radius: 6px;
-    }
-
-.history h2 {
     text-align: center;
-    margin-bottom: 1.5rem;
 }
 
-.history-grid {
+/* 2. Call to Action Section */
+.cta-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    margin: 1.5rem 0;
+    background-color: #f4f7f9;
+    border-radius: 6px;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #003049;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #00507a;
+}
+
+/* 3. Multi-column CSS Grids (Home & Trips) */
+.home-grid {
     display: grid;
-    grid-template-columns: 1fr 250px 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
-    align-items: center;
+    margin: 2rem 0;
 }
 
-.history-grid img {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-}
-/* Adventures Section */
-.adventures {
-    padding: 2rem 1rem;
-}
-
-.adventures h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.adventure-gallery {
+.trips-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
 }
 
-.adventure-gallery figure {
-    margin: 0;
-    text-align: center;
-    }
+.trip-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e6eb;
+    border-radius: 6px;
+    padding: 1rem;
+}
 
-.adventure-gallery img {
+.grid-item img,
+.trip-card img {
     width: 100%;
-    height: 120px;
+    height: 220px;
     object-fit: cover;
     border-radius: 4px;
 }
 
-.adventure-gallery figcaption {
-    font-size: 0.85rem;
-    margin-top: 0.5rem;
-    font-weight: bold;
-    color: #1a1a1a;
+/* 4. Newsletter Form (Home) */
+.newsletter {
+    background-color: #f4f7f9;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 6px;
 }
 
-/* Footer Section */
-footer {
+.newsletter form {
     display: grid;
-    grid-template-columns: 1fr auto;
-     align-items: center;
-    padding: 1rem;
-    background-color: var(--primary-color);
-    color: #ffffff;
-    margin-top: 2rem;
-    border-top: 4px solid var(--secondary-color);
-}
-
-footer p {
-    text-align: center;
-}
-
-.socialmedia {
-    display: flex;
     gap: 0.75rem;
-    justify-content: flex-end;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
-.socialmedia img {
-    width: 30px;
-    height: 30px;
-}/* === NEW RULES FOR CONTACT.HTML === */
-
-/* 1. Company information and Google Map side by side */
-.contact-info {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: center;
-  margin-bottom: 2rem;
+.newsletter input,
+.newsletter button {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 4px;
 }
 
-.map iframe {
-  border: none;
-  width: 100%;
-  border-radius: 8px;
+.newsletter input {
+    border: 1px solid #cccccc;
 }
 
-/* 2. Layout for the 3 employee profiles */
-.employee-profiles {
-  display: flex;
-  justify-content: space-around;
-  gap: 15px;
-  text-align: center;
-  margin-bottom: 2rem;
+.newsletter button {
+    background-color: #003049;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
 }
 
-.employee-profiles img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
+.newsletter button:hover {
+    background-color: #00507a;
 }
 
-/* 3. Contact form styling */
-.contact-form form {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
+/* 5. Trips Summary Table (Trips) */
+.trips-table {
+    margin: 2rem 0;
+    overflow-x: auto;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: inherit;
+.trips-table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
 }
 
-.contact-form fieldset {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.trips-table th,
+.trips-table td {
+    border: 1px solid #cccccc;
+    padding: 0.75rem;
+    text-align: left;
 }
 
-/* 4. Accessible, high-contrast submit button (AA level) */
-.contact-form button[type="submit"] {
-  background-color: var(--primary-color, #0b3954);
-  color: #ffffff;
-  padding: 12px 20px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.trips-table th {
+    background-color: #003049;
+    color: #ffffff;
 }
 
-.contact-form button[type="submit"]:hover {
-  background-color: var(--secondary-color);
-  color: #1a1a1a;
+.trips-table tbody tr:nth-child(even) {
+    background-color: #f4f7f9;
+}
+
+/* 6. Responsive Adjustments for Mobile Screens */
+@media (max-width: 768px) {
+    .home-grid,
+    .trips-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        top: 10%;
+        font-size: 1.25rem;
+        padding: 0.6rem;
+    }
 }
