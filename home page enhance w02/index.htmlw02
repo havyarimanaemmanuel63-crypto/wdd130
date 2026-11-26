@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD130 - Accueil</title>
+    
+    <!-- Balises Meta obligatoires complétées pour l'audit -->
+    <meta name="description" content="Page d'accueil d'Emmanuel Havyarimana pour le projet Home Page Enhancement du cours WDD130, présentant mon profil et mon pays, le Burundi.">
+    <meta name="author" content="Emmanuel Havyarimana">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <main>
+        <h1>Bienvenue sur mon site WDD130</h1>
+        <!-- Image de profil pointant vers ton dossier image/ -->
+        <img src="image/profile111111.jpg" alt="Photo de profil d'Emmanuel Havyarimana">
+        <p>Je m'appelle Emmanuel Havyarimana et je suis actuellement ce cours à BYU-Pathway Worldwide pour apprendre le développement web, le HTML, le CSS et la gestion de projets avec Git et GitHub.</p>
+    </main>
+
+    <!-- Élément Aside ajouté pour la semaine 2 -->
+    <aside>
+        <h2>Burundi</h2>
+        <!-- Image représentant ton pays (pense à vérifier qu'elle fait moins de 125 ko) -->
+        <img src="image/profile111111.jpg" alt="Une vue représentative de mon pays, le Burundi">
+        <p>Le Burundi est un magnifique pays d'Afrique de l'Est, connu pour sa culture riche, ses tambours sacrés traditionnels, ses paysages montagneux majestueux et le magnifique lac Tanganyika.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 | Emmanuel Havyarimana | WDD130 Home Page</p>
+    </footer>
+
+</body>
+</html>

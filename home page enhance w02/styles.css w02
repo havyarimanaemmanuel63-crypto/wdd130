@@ -1,0 +1,38 @@
+/* --- Style du bloc principal --- */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Style spécifique à l'image de profil dans le main --- */
+main img {
+  width: 150px;
+  height: auto;
+}
+
+/* --- Style demandé pour l'élément Aside --- */
+aside {
+  width: 250px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+    padding: 15px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Style de l'image à l'intérieur de l'aside */
+aside img {
+  width: 200px;
+  height: auto; /* Conserve le ratio d'aspect pour éviter de déformer l'image */
+}
+
+/* --- Remise à zéro du padding des paragraphes --- */
+p {
+  padding: 0;
+}
+/* --- Style demandé pour le Footer --- */
+footer {
+  margin-top: 30px;          /* 1. Ajoute de l'espace en haut pour séparer du main */
+  border-top: 2px solid #333;    /* 2. Ajoute une bordure supérieure de distinction */
+  text-align: center;        /* 3. Aligne le texte au centre */
+}
